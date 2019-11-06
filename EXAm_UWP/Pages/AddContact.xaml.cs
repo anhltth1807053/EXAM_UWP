@@ -35,13 +35,13 @@ namespace EXAm_UWP.Pages
         private void Add_Contact(object sender, RoutedEventArgs e)
         {
             this.InitializeComponent();
-            //            Contact contact = new Contact()
-            //            {
-            //                name = Name.Text,
-            //                phone = Phone.Text,
-            //            };
-            //            contactModel.Insert(contact);
-            //            this.Frame.Navigate(this.GetType());
+            Contact contact = new Contact()
+            {
+                name = Name.Text,
+                phone = Phone.Text,
+            };
+            contactModel.Insert(contact);
+            this.Frame.Navigate(this.GetType());
         }
 
         private void SearchContact(object sender, RoutedEventArgs e)

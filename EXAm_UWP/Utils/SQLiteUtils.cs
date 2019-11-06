@@ -31,7 +31,7 @@ namespace EXAm_UWP.Utils
 
         private void CreateTables()
         {
-            string sql = @"CREATE TABLE IF NOT EXISTS Contact (Id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,Name VARCHAR( 140 ),Phone String( 140 ));";
+            string sql = @"CREATE TABLE IF NOT EXISTS Contact (Id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,Name VARCHAR( 140 ),Phone VARCHAR( 140 ));";
             using (var statement = Connection.Prepare(sql))
             {
                 statement.Step();

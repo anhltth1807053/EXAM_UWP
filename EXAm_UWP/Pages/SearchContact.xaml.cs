@@ -28,6 +28,7 @@ namespace EXAm_UWP.Pages
         public SearchContact()
         {
             this.InitializeComponent();
+            this.contactModel = new ContactModel();
         }
 
         private void Search_Contact(object sender, RoutedEventArgs e)
@@ -37,6 +38,7 @@ namespace EXAm_UWP.Pages
                 name = Name.Text,
                 phone = Phone.Text,
             };
+
             contactModel.Insert(contact);
             this.Frame.Navigate(this.GetType());
         }
