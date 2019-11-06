@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="EXAm_UWP.Pages.SearchContact"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EXAm_UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:exAmUwp="using:EXAm_UWP"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" TextAlignment="Center" FontWeight="Bold" FontSize="20" Margin="10">Search Contact</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1"  TextAlignment="Right" Margin="5">Name</TextBlock>
+        <TextBox x:Name="Name" Grid.Column="1" Grid.Row="1" Margin="5" ></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="2" TextAlignment="Right" Margin="5" >Phone</TextBlock>
+        <TextBox x:Name="Phone" Grid.Column="1" Grid.Row="2"  Margin="5"></TextBox>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3" Margin="5">
+            <Button Click="Search_Contact" >Search Contact</Button>
+
+        </StackPanel>
+        <HyperlinkButton Grid.Column="1" Grid.Row="4" x:Name="search" Click="AddContact" Margin="5">Search Contact</HyperlinkButton>
+    </Grid>
+</Page>
